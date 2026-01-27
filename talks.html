@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talks | Ahmed</title>
+    <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+    <nav class="glass-nav">
+        <a href="index.html" class="nav-logo">Ahmed</a>
+        <div class="nav-links">
+            <a href="projects.html">Projects</a>
+            <a href="talks.html" class="active">Talks</a>
+            <a href="mathsoc.html" class="nav-link-gold">Math Society</a>
+            <a href="about.html">About</a>
+            <a href="cv.html">CV</a>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <h1>Talks</h1>
+            <p>Presentations, workshops, and teaching sessions.</p>
+        </header>
+
+        <!-- Sub-Navbar -->
+        <nav class="sub-nav">
+            <button class="sub-nav-btn active" onclick="openTab(event, 'shor')">The Qubit & Shor's Algo</button>
+            <button class="sub-nav-btn" onclick="openTab(event, 'math-ai')">Math behind AI, ML, and NN</button>
+            <button class="sub-nav-btn" onclick="openTab(event, 'ta-cpp')">Teaching Assistant in C & C++</button>
+            <button class="sub-nav-btn" onclick="openTab(event, 'ta-math')">Teaching Assistant in Math foundations of
+                CS</button>
+        </nav>
+
+        <!-- Tab Content 1: Shor's Algorithm -->
+        <div id="shor" class="tab-content active">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/G_0H_Fy2vOc"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <article class="talk-card-full" style="border: none; padding: 0;">
+                <div class="talk-meta">
+                    <span class="talk-date">March 2025</span>
+                    <span class="talk-venue">UgS 1</span>
+                </div>
+                <h3>The Qubit & Shor’s Algorithm</h3>
+                <p class="talk-topic">Quantum Computing / Cryptography</p>
+                <div class="talk-desc" style="max-width: 100%;">
+                    <p>
+                        In this talk, I break down how Quantum Computers utilize superposition and entanglement to solve
+                        the period-finding problem efficiently.
+                        I explain the significance of this algorithm for modern cryptography and demonstrate the
+                        concepts explored in my
+                        <a href="projects/shors-algo.html"
+                            style="color: var(--accent-primary); text-decoration: underline;">Shor's Algorithm
+                            Project</a>.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <!-- Tab Content 2: Math Behind AI -->
+        <div id="math-ai" class="tab-content">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7bPgCvI6ark"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <article class="talk-card-full" style="border: none; padding: 0;">
+                <div class="talk-meta">
+                    <span class="talk-date">October 2025</span>
+                    <span class="talk-venue">Constructor Uni Math Society</span>
+                </div>
+                <h3>The Math Behind AI, ML, and Neural Networks</h3>
+                <p class="talk-topic">Probability / Optimization / Linear Algebra</p>
+                <div class="talk-desc" style="max-width: 100%;">
+                    <p>
+                        "Some people think AI is magic. I spent 13 hours researching and 9 hours designing to prove it's
+                        not."
+                    </p>
+                    <p style="margin-top: 0.5rem;">
+                        This 1h20 lecture demystifies AI, moving from simple search algorithms (mazes) to reasoning
+                        under uncertainty (probability) and finally to Deep Learning (optimization & backpropagation).
+                        I conclude with a 3-minute "from scratch" explanation of how Large Language Models like ChatGPT
+                        work, covering tokenization, embeddings, and self-attention.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <!-- Tab Content 3: TA C/C++ -->
+        <div id="ta-cpp" class="tab-content">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/255UT8YKDDQ"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <article class="talk-card-full" style="border: none; padding: 0;">
+                <div class="talk-meta">
+                    <span class="talk-date">Fall 2025</span>
+                    <span class="talk-venue">Programming in C/C++ (Tutorial)</span>
+                </div>
+                <h3>Advanced Linked Data Structures</h3>
+                <p class="talk-topic">Data Structures & Memory Management</p>
+                <div class="talk-desc" style="max-width: 100%;">
+                    <p>
+                        A comprehensive tutorial session covering the implementation and nuances of Linked Lists in
+                        C/C++.
+                        I break down Single Linked Lists, Doubly Linked Lists, and Circular Linked Lists, explaining
+                        pointer manipulation, memory allocation, and edge-case handling for each variant.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <!-- Tab Content 4: TA Math Foundations -->
+        <div id="ta-math" class="tab-content">
+
+            <!-- Video 1: Abstract Algebra -->
+            <div style="margin-bottom: 4rem;">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FSX7i3DI8qE"
+                        title="Abstract Algebra"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <article class="talk-card-full" style="border: none; padding: 0;">
+                    <div class="talk-meta">
+                        <span class="talk-date">Fall 2025</span>
+                        <span class="talk-venue">Math Foundations (Part 1)</span>
+                    </div>
+                    <h3>Abstract Algebra: Groups & Fields</h3>
+                    <p class="talk-topic">Algebraic Structures</p>
+                    <div class="talk-desc" style="max-width: 100%;">
+                        <p>
+                            An introduction to the algebraic structures that underpin cryptography and coding theory.
+                            We explore the definition of Groups, Rings, and Fields, with examples relevant to Computer
+                            Science.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Video 2: Relational Algebra -->
+            <div style="margin-bottom: 4rem;">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HxJRSdt5fzE"
+                        title="Relational Algebra"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <article class="talk-card-full" style="border: none; padding: 0;">
+                    <div class="talk-meta">
+                        <span class="talk-date">Fall 2025</span>
+                        <span class="talk-venue">Math Foundations (Part 2)</span>
+                    </div>
+                    <h3>Relations & Order Theory</h3>
+                    <p class="talk-topic">Set Theory & Logic</p>
+                    <div class="talk-desc" style="max-width: 100%;">
+                        <p>
+                            A formal treatment of binary relations on sets. We cover properties like reflexivity,
+                            symmetry, and transitivity to define
+                            <strong>Equivalence Relations</strong> and <strong>Equivalence Classes</strong>. We also
+                            explore <strong>Partial Orders</strong> (reflexive, antisymmetric, transitive) and Strict
+                            Partial Orders.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+
+
+            <!-- Video 3: Floating Point & IEEE -->
+            <div style="margin-bottom: 4rem;">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dwLuamkHGQY"
+                        title="IEEE Floating Point Conventions"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <article class="talk-card-full" style="border: none; padding: 0;">
+                    <div class="talk-meta">
+                        <span class="talk-date">Fall 2025</span>
+                        <span class="talk-venue">Math Foundations (Part 3)</span>
+                    </div>
+                    <h3>IEEE 754 & Data Representation</h3>
+                    <p class="talk-topic">Computer Arithmetic</p>
+                    <div class="talk-desc" style="max-width: 100%;">
+                        <p>
+                            Understanding how computers store real numbers and dates. We dive into the <strong>IEEE 754
+                                Floating Point Standard</strong> (Sign, Exponent, Mantissa)
+                            and discuss the precision limitations and error handling inherent in these formats.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Video 4: Boolean Algebra -->
+            <div>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FcWpIzR_B60"
+                        title="Boolean Algebra"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <article class="talk-card-full" style="border: none; padding: 0;">
+                    <div class="talk-meta">
+                        <span class="talk-date">Fall 2025</span>
+                        <span class="talk-venue">Math Foundations (Part 4)</span>
+                    </div>
+                    <h3>Boolean Algebra & Logic</h3>
+                    <p class="talk-topic">Digital Logic</p>
+                    <div class="talk-desc" style="max-width: 100%;">
+                        <p>
+                            The core logic of digital circuits and computation. We cover truth tables, canonical forms
+                            (CNF/DNF), and how complex logical expressions
+                            can be simplified for hardware optimization.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+
+        <script>
+            function openTab(evt, tabName) {
+                // Hide all tab content
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tab-content");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Remove active class from all buttons
+                tablinks = document.getElementsByClassName("sub-nav-btn");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab and add active class to the button
+                document.getElementById(tabName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+    </main>
+</body>
+
+</html>

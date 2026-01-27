@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shor’s Algorithm | Ahmed</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+</head>
+
+<body>
+    <!-- Navigation (paths adjusted for subdirectory) -->
+    <nav class="glass-nav">
+        <a href="../index.html" class="nav-logo">Ahmed</a>
+        <div class="nav-links">
+            <a href="../projects.html" class="active">Projects</a>
+            <a href="../talks.html">Talks</a>
+            <a href="../about.html">About</a>
+            <a href="../cv.html">CV</a>
+        </div>
+    </nav>
+
+    <main class="project-theme-yellow">
+        <header class="page-header">
+            <div class="project-meta-top">Research · Cryptography · QC</div>
+            <h1>The Qubit and Shor’s Algorithm</h1>
+            <p class="project-subtitle">Investigating the cryptographic implications of quantum computing.</p>
+        </header>
+
+        <div class="project-content-layout">
+            <!-- Main Content -->
+            <article class="project-main-text">
+                <section>
+                    <h2>Overview</h2>
+                    <p>
+                        Selected for the <strong>first edition of the Undergraduate Seminar</strong> organized by the
+                        Math Society in Spring 2025.
+                        I conducted this research over a 3-week intensive period, culminating in a paper and a technical
+                        presentation.
+                    </p>
+                    <p>
+                        This project explores the intersection of quantum mechanics and modern cryptography.
+                        Specifically, I analyzed how <strong>Shor's Algorithm</strong> poses a theoretical threat to RSA
+                        encryption
+                        by leveraging quantum superposition to find the period of modular functions efficiently.
+                    </p>
+                    <p style="margin-top: 1rem; font-style: italic; color: var(--accent-secondary);">
+                        * The paper is currently being reviewed by Dr. Prof. Mallahi Keivan Karai.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Presentation</h2>
+                    <div
+                        style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; border: 1px solid var(--glass-border);">
+                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                            src="https://www.youtube.com/embed/G_0H_Fy2vOc" title="Shor's Algorithm Talk"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </section>
+
+
+                <section>
+                    <h2>Technical Implementation</h2>
+                    <p>
+                        The project focused on a theoretical derivation of the algorithm's complexity and its
+                        circuit implementation requirements using Python and Qiskit for visualization. Key
+                        analytical components include:
+                    </p>
+                    <ul class="tech-list">
+                        <li><strong>Cryptographic Context:</strong> Modeled the RSA key generation and the reduction
+                            of factorization to order-finding.</li>
+                        <li><strong>Theoretical Analysis:</strong> Analyzed the feasibility of implementing the
+                            algorithm on current vs. fault-tolerant hardware.</li>
+                        <li><strong>Circuit Construction:</strong> Constructed the modular exponentiation unitary
+                            operators to visualize the gate depth and resource requirements.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Conclusion</h2>
+                    <p>
+                        The research highlighted the significant resource gap between current NISQ era devices and
+                        the requirements for running Shor's algorithm on cryptographically relevant integers.
+                        It concluded with a feasibility analysis of when we might expect quantum computers to break
+                        standard RSA-2048 encryption.
+                    </p>
+                </section>
+            </article>
+
+            <!-- Sidebar / Quick Info -->
+            <aside class="project-sidebar">
+                <div class="sidebar-block">
+                    <h3>Role</h3>
+                    <p>Lead Researcher</p>
+                </div>
+                <div class="sidebar-block">
+                    <h3>Timeline</h3>
+                    <p>Spring 2025 (3 Weeks)</p>
+                </div>
+                <div class="sidebar-block">
+                    <h3>Stack</h3>
+                    <div class="stack-tags">
+                        <span>Python</span>
+                        <span>Qiskit</span>
+                        <span>NumPy</span>
+                        <span>Latex</span>
+                    </div>
+                </div>
+                <div class="sidebar-block">
+                    <a href="../assets/The_Qubit_and_Shor_s_Algorithm.pdf" target="_blank"
+                        class="btn btn-primary full-width">Read Paper</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+</body>
+
+</html>

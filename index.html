@@ -1,21 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | CS Major</title>
+  <title>Ahmed | CS & Math</title>
   <link rel="stylesheet" href="assets/style.css" />
+  <meta name="description"
+    content="Portfolio of Ahmed, Computer Science major & Math minor. Specializing in Quantum Computing, ML, and Systems.">
 </head>
-<body>
-  <main>
-    <h1>Your Name</h1>
-    <p>Computer Science major · Math minor</p>
 
-    <p>
-      <a href="https://github.com/your-username">GitHub</a> ·
-      <a href="CV.pdf">CV</a> ·
-      <a href="mailto:youremail@example.com">Email</a>
-    </p>
+<body>
+  <nav class="glass-nav">
+    <a href="index.html" class="nav-logo">Ahmed</a>
+    <div class="nav-links">
+      <a href="projects.html">Projects</a>
+      <a href="talks.html">Talks</a>
+      <a href="mathsoc.html" class="nav-link-gold">Math Society</a>
+      <a href="about.html">About</a>
+      <a href="cv.html">CV</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Ahmed</h1>
+        <p class="identity">Computer Science major · Mathematics & Modeling minor @ Constructor University</p>
+
+        <div class="roles">
+          <span class="role-tag">Software Engineer at Prysm</span>
+          <span class="role-tag">President of Math Society at Constructor University</span>
+        </div>
+
+        <p class="bio">
+          Passionate about bridging the gap between theoretical mathematics and scalable systems.
+          Building tools for the future of computing.
+        </p>
+
+        <div class="cta-group">
+          <a href="assets/Maghri_Ahmed_CV.pdf" target="_blank" class="btn btn-primary">CV</a>
+          <a href="#experience" class="btn btn-secondary">Experience</a>
+          <a href="talks.html" class="btn btn-secondary">Talks</a>
+          <a href="https://github.com/iramxx" target="_blank" class="btn btn-secondary">GitHub</a>
+          <a href="https://www.linkedin.com/in/ahmed-maghri/" target="_blank" class="btn btn-secondary">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <img src="assets/hero.jpg" alt="Ahmed Profile Photo" id="profile-img">
+      </div>
+    </section>
+
+    <!-- 2. Featured Projects -->
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <!-- Card 1 -->
+        <article class="project-card">
+          <h3 class="project-title">Shor’s Algorithm & QC</h3>
+          <div class="project-meta">Research · Theory + Implementation</div>
+          <p class="project-desc">
+            Simulation of Shor’s algorithm for integer factorization on quantum circuits.
+          </p>
+          <a href="projects/shors-algo.html" class="card-link">View Project →</a>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="project-card">
+          <h3 class="project-title">MSA Platform</h3>
+          <div class="project-meta">Full-stack · Real Users</div>
+          <p class="project-desc">
+            A comprehensive management platform serving 500+ active student users.
+          </p>
+          <a href="projects/msa-platform.html" class="card-link">View Project →</a>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="project-card">
+          <h3 class="project-title">AutoAgent</h3>
+          <div class="project-meta">AI · Systems · Applied ML</div>
+          <p class="project-desc">
+            Autonomous agent framework for executing scientific repositories and code analysis.
+          </p>
+          <a href="projects/auto-agent.html" class="card-link">View Project →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="experience-list">
+
+        <!-- York University (Incoming) -->
+        <article class="experience-card experience-card-gold">
+          <div class="exp-header">
+            <h3>Incoming Research Intern</h3>
+            <span class="exp-company">York University (DAAD & Mitacs)</span>
+            <span class="exp-date">Summer 2026</span>
+          </div>
+          <div class="exp-meta">Toronto, Canada | Research Scholarship</div>
+          <ul class="exp-details">
+            <li>Selected for the prestigious <strong>DAAD & Mitacs Globalink Research Award</strong>.</li>
+            <li>Will conduct research on <strong>Machine Learning for Next-Gen Networks</strong> under <strong>Prof.
+                Ping Wang</strong> (IEEE Fellow).</li>
+            <li>Focusing on implementing ML algorithms for resource allocation in future computer networks.</li>
+          </ul>
+        </article>
+
+        <!-- Prysm -->
+        <article class="experience-card">
+          <div class="exp-header">
+            <h3>Software Engineer</h3>
+            <span class="exp-company">Prysm</span>
+            <span class="exp-date">Present</span>
+          </div>
+          <div class="exp-meta">Causal ML & Backend Engineering</div>
+          <ul class="exp-details">
+            <li>Specializing in <strong>Causal Machine Learning</strong> and ontology design.</li>
+            <li>Developing scalable backend architectures and causal discovery pipelines.</li>
+            <li>Managing cloud infrastructure for high-performance ML workloads.</li>
+          </ul>
+        </article>
+
+        <!-- Constructor University -->
+        <article class="experience-card">
+          <div class="exp-header">
+            <h3>Teaching Assistant: C/C++ & Math Foundations of CS</h3>
+            <span class="exp-company">Constructor University</span>
+            <span class="exp-date">Sept 2025 – January 2026</span>
+          </div>
+          <div class="exp-meta">Bremen, Germany | Algorithms & Mathematics</div>
+          <ul class="exp-details">
+            <li>Supported lectures and tutorials for <strong>over 350 students</strong> in the theoretical and practical
+              foundations of Computer Science.</li>
+            <li>Strengthened students' understanding of <strong>Algorithms and Programming</strong> (C/C++ memory
+              management, pointers, data structures).</li>
+            <li>Guided evaluations and taught key mathematical concepts including <strong>Graph Theory</strong> and
+              <strong>Abstract Algebra</strong>.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Constructor Tech -->
+        <article class="experience-card">
+          <div class="exp-header">
+            <h3>Research Student Intern</h3>
+            <span class="exp-company">Constructor Tech</span>
+            <span class="exp-date">Jul 2025 – Sept 2025</span>
+          </div>
+          <div class="exp-meta">Bremen, Germany | AI for Geometry Reasoning</div>
+          <ul class="exp-details">
+            <li>Collaborated with AI/Math research teams on <strong>Theorem-Proving Automation</strong>.</li>
+            <li>Contributed to proof-automation pipelines using Wu's Method and Alpha Geometry.</li>
+            <li>Investigated symbolic reasoning and computability of high-school geometry problems.</li>
+          </ul>
+        </article>
+
+        <!-- GBCS Group -->
+        <article class="experience-card">
+          <div class="exp-header">
+            <h3>Lead Fleet Systems Developer</h3>
+            <span class="exp-company">GBCS Group</span>
+            <span class="exp-date">Jun 2025 – Aug 2025</span>
+          </div>
+          <div class="exp-meta">Calgary, Canada | Leadership & Full-stack</div>
+          <ul class="exp-details">
+            <li>Led a cross-functional team of 10 engineers building scalable fleet-management systems.</li>
+            <li>Developed robust Django REST APIs and coordinated integration with UI/UX and DevOps.</li>
+            <li>Improved delivery time by <strong>20%</strong> by implementing SCRUM and agile sprints.</li>
+          </ul>
+        </article>
+
+
+
+      </div>
+    </section>
+
+
+
+    <!-- 4. Quick Credibility -->
+    <section class="credibility">
+      <div class="cred-item">
+        <strong>Engineering</strong> Scalable Systems & Full-stack
+      </div>
+      <div class="cred-item">
+        <strong>Research</strong> AI Automation & Geometry
+      </div>
+      <div class="cred-item">
+        <strong>Leadership</strong> Math Society President
+      </div>
+    </section>
+
+    <!-- 5. Footer -->
+    <footer>
+      <a href="amaghri@constructor.university">Email</a>
+      <a href="https://github.com/iramxx" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/ahmed-maghri/" target="_blank">LinkedIn</a>
+      <span>Constructor University</span>
+    </footer>
   </main>
 </body>
+
 </html>

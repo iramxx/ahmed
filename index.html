@@ -16,6 +16,14 @@
       <img src="assets/hero.jpg" alt="Ahmed" class="nav-logo-img">
       Ahmed
     </a>
+
+    <!-- Hamburger Menu Button (Mobile Only) -->
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <div class="nav-links">
       <a href="projects.html">Projects</a>
       <a href="talks.html">Talks</a>
@@ -24,6 +32,14 @@
       <a href="cv.html">CV</a>
     </div>
   </nav>
+
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function () {
+      this.classList.toggle('active');
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
 
   <main>
     <!-- 1. Hero Section -->
@@ -56,10 +72,51 @@
       </div>
     </section>
 
-    <!-- 2. Featured Projects -->
+    <!-- 2. Featured Talk (EASY TO UPDATE) -->
+    <section id="featured-talk" style="margin-bottom: 5rem;">
+      <h2 style="margin-bottom: 1rem;">Latest Talk</h2>
+      <div
+        style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 2rem; backdrop-filter: blur(10px);">
+
+        <!-- Video Embed -->
+        <div class="video-container" style="margin-bottom: 1.5rem;">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/7bPgCvI6ark"
+            title="Math Behind AI, ML, and Neural Networks"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+
+        <!-- Talk Info -->
+        <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+          <span
+            style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-secondary); font-weight: 600;">October
+            2025</span>
+          <span
+            style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-secondary); font-weight: 600;">Math
+            Society Topic Tutorial</span>
+          <span
+            style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-secondary); font-weight: 600;">60+
+            Attendees</span>
+        </div>
+
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">The Math Behind AI, ML, and Neural Networks</h3>
+        <p style="font-size: 0.9rem; color: var(--accent-tertiary); margin-bottom: 1rem;">First "Math Behind" Series ·
+          Constructor University</p>
+
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+          An 80-minute deep dive demystifying AI — from search algorithms to Deep Learning.
+          I break down the mathematics of neural networks, backpropagation, and conclude with a live 3-minute
+          explanation of how Large Language Models work from scratch.
+        </p>
+
+        <a href="talks.html" class="btn btn-secondary">View All Talks →</a>
+      </div>
+    </section>
+
+    <!-- 3. Featured Projects -->
     <section id="projects">
       <h2>Featured Projects</h2>
-      <div class="projects-grid">
+      <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
         <!-- Card 1 -->
         <article class="project-card">
           <h3 class="project-title">Shor’s Algorithm & QC</h3>
@@ -79,20 +136,13 @@
           </p>
           <a href="projects/msa-platform.html" class="card-link">View Project →</a>
         </article>
-
-        <!-- Card 3 -->
-        <article class="project-card">
-          <h3 class="project-title">AutoAgent</h3>
-          <div class="project-meta">AI · Systems · Applied ML</div>
-          <p class="project-desc">
-            Autonomous agent framework for executing scientific repositories and code analysis.
-          </p>
-          <a href="projects/auto-agent.html" class="card-link">View Project →</a>
-        </article>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="projects.html" class="btn btn-secondary">View All Projects →</a>
       </div>
     </section>
 
-    <!-- 3. Experience -->
+    <!-- 4. Experience -->
     <section id="experience">
       <h2>Experience</h2>
       <div class="experience-list">

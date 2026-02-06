@@ -14,13 +14,28 @@
             <img src="../assets/hero.jpg" alt="Ahmed" class="nav-logo-img">
             Ahmed
         </a>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <div class="nav-links">
             <a href="../projects.html" class="active">Projects</a>
             <a href="../talks.html">Talks</a>
+            <a href="../mathsoc.html" class="nav-link-gold">Math Society</a>
             <a href="../about.html">About</a>
             <a href="../cv.html">CV</a>
         </div>
     </nav>
+
+    <script>
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function () {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 
     <main class="project-theme-green">
         <header class="page-header">

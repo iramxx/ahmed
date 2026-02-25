@@ -48,43 +48,14 @@
 
         <!-- Sub-Navbar -->
         <nav class="sub-nav">
-            <button class="sub-nav-btn active" onclick="openTab(event, 'shor')">The Qubit & Shor's Algo</button>
             <button class="sub-nav-btn" onclick="openTab(event, 'math-ai')">Math behind AI, ML, and NN</button>
             <button class="sub-nav-btn" onclick="openTab(event, 'math-crypto')">Math behind Cryptography, and
                 Cybersecurity</button>
             <button class="sub-nav-btn" onclick="openTab(event, 'ta-cpp')">Teaching Assistant in C & C++</button>
             <button class="sub-nav-btn" onclick="openTab(event, 'ta-math')">Teaching Assistant in Math foundations of
                 CS</button>
+            <button class="sub-nav-btn" onclick="openTab(event, 'shor')">The Qubit & Shor's Algo</button>
         </nav>
-
-        <!-- Tab Content 1: Shor's Algorithm -->
-        <div id="shor" class="tab-content active">
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/G_0H_Fy2vOc"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <article class="talk-card-full" style="border: none; padding: 0;">
-                <div class="talk-meta">
-                    <span class="talk-date">March 2025</span>
-                    <span class="talk-venue">UgS 1</span>
-                </div>
-                <h3>The Qubit & Shor’s Algorithm</h3>
-                <p class="talk-topic">Quantum Computing / Cryptography</p>
-                <div class="talk-desc" style="max-width: 100%;">
-                    <p>
-                        In this talk, I break down how Quantum Computers utilize superposition and entanglement to solve
-                        the period-finding problem efficiently.
-                        I explain the significance of this algorithm for modern cryptography and demonstrate the
-                        concepts explored in my
-                        <a href="projects/shors-algo.html"
-                            style="color: var(--accent-primary); text-decoration: underline;">Shor's Algorithm
-                            Project</a>.
-                    </p>
-                </div>
-            </article>
-        </div>
 
         <!-- Tab Content 2: Math Behind AI -->
         <div id="math-ai" class="tab-content">
@@ -275,6 +246,35 @@
                 </article>
             </div>
 
+        </div>
+
+        <!-- Tab Content 1: Shor's Algorithm -->
+        <div id="shor" class="tab-content active">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/G_0H_Fy2vOc"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <article class="talk-card-full" style="border: none; padding: 0;">
+                <div class="talk-meta">
+                    <span class="talk-date">March 2025</span>
+                    <span class="talk-venue">UgS 1</span>
+                </div>
+                <h3>The Qubit & Shor’s Algorithm</h3>
+                <p class="talk-topic">Quantum Computing / Cryptography</p>
+                <div class="talk-desc" style="max-width: 100%;">
+                    <p>
+                        In this talk, I break down how Quantum Computers utilize superposition and entanglement to solve
+                        the period-finding problem efficiently.
+                        I explain the significance of this algorithm for modern cryptography and demonstrate the
+                        concepts explored in my
+                        <a href="projects/shors-algo.html"
+                            style="color: var(--accent-primary); text-decoration: underline;">Shor's Algorithm
+                            Project</a>.
+                    </p>
+                </div>
+            </article>
         </div>
 
         <script>

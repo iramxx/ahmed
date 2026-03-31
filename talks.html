@@ -48,9 +48,10 @@
 
         <!-- Sub-Navbar -->
         <nav class="sub-nav">
-            <button class="sub-nav-btn" onclick="openTab(event, 'math-ai')">Math behind AI, ML, and NN</button>
-            <button class="sub-nav-btn" onclick="openTab(event, 'math-crypto')">Math behind Cryptography, and
+            <button class="sub-nav-btn" onclick="openTab(event, 'math-finance')">The Numbers Behind Trade</button>
+            <button class="sub-nav-btn active" onclick="openTab(event, 'math-crypto')">Math behind Cryptography, and
                 Cybersecurity</button>
+            <button class="sub-nav-btn" onclick="openTab(event, 'math-ai')">Math behind AI, ML, and NN</button>
             <button class="sub-nav-btn" onclick="openTab(event, 'ta-cpp')">Teaching Assistant in C & C++</button>
             <button class="sub-nav-btn" onclick="openTab(event, 'ta-math')">Teaching Assistant in Math foundations of
                 CS</button>
@@ -87,8 +88,34 @@
             </article>
         </div>
 
+        <!-- Tab Content New: Quant Finance -->
+        <div id="math-finance" class="tab-content">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/E0SM39kYx-4"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <article class="talk-card-full" style="border: none; padding: 0;">
+                <div class="talk-meta">
+                    <span class="talk-date">March 2026</span>
+                    <span class="talk-venue">Collab with Adham (President of IB&amp;CM Society)</span>
+                </div>
+                <h3>The Numbers Behind Trade: When Equations Meet Wall Street</h3>
+                <p class="talk-topic">Arbitrage / Options Pricing / Black-Scholes PDE / Itô's Lemma / Quant Finance</p>
+                <div class="talk-desc" style="max-width: 100%;">
+                    <p>
+                        A collaborative talk bridging the gap between mathematical theory and financial markets. We explored how continuous mathematical models are utilized by quantitative analysts to price derivatives and manage risk.
+                    </p>
+                    <p style="margin-top: 0.5rem;">
+                        Key topics included the fundamentals of arbitrage, risk-neutral probability, binomial models for pricing options, and how continuous stock paths through Brownian motion and Itô's Lemma lead to the famous Black-Scholes equation.
+                    </p>
+                </div>
+            </article>
+        </div>
+
         <!-- Tab Content X: Math Behind Cryptography -->
-        <div id="math-crypto" class="tab-content">
+        <div id="math-crypto" class="tab-content active" style="display: block;">
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/V4_HV2FFi5c"
                     title="YouTube video player"
@@ -249,7 +276,7 @@
         </div>
 
         <!-- Tab Content 1: Shor's Algorithm -->
-        <div id="shor" class="tab-content active">
+        <div id="shor" class="tab-content">
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/G_0H_Fy2vOc"
                     title="YouTube video player"

@@ -986,6 +986,11 @@ footer a:hover {
   /* Amber 500 */
 }
 
+.project-theme-blue {
+  --accent-primary: #3b82f6;
+  /* Blue 500 */
+}
+
 .project-theme-red {
   --accent-primary: #ef4444;
   /* Red 500 */

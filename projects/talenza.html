@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talenza | Ahmed</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../assets/style.css" />
+</head>
+
+<body>
+    <nav class="glass-nav">
+        <a href="../index.html" class="nav-logo">
+            <img src="../assets/hero.jpg" alt="Ahmed" class="nav-logo-img">
+            Ahmed
+        </a>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links">
+            <a href="../projects.html" class="active">Projects</a>
+            <a href="../talks.html">Talks</a>
+            <a href="../mathsoc.html" class="nav-link-gold">Math Society</a>
+            <a href="../about.html">About</a>
+            <a href="../cv.html">CV</a>
+        </div>
+    </nav>
+
+    <script>
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function () {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+
+    <main class="project-theme-blue">
+        <header class="page-header">
+            <div class="project-meta-top">AI Systems · Web Development</div>
+            <h1>Talenza</h1>
+            <p class="project-subtitle">AI-powered executive hiring intelligence platform.</p>
+        </header>
+
+        <div class="project-content-layout">
+            <!-- Main Content -->
+            <article class="project-main-text">
+                <section>
+                    <h2>Overview</h2>
+                    <p>
+                        <strong>Talenza</strong> is an AI-powered executive hiring intelligence platform built for a BMW hackathon. The core concept revolves around scenario-based ranking: the same candidate pool re-ranks differently depending on which strategic business scenario is active (Crisis, Transformation, Growth, Succession).
+                    </p>
+                    <p>
+                        Target users are senior HR executive search teams hiring at the VP/SVP/board level. Traditional ATS tools rank candidates once, but Talenza models the reality that candidate fit is heavily context-dependent—a candidate ideal for a crisis is often wrong for a corporate transformation.
+                    </p>
+                    <p style="margin-top: 1rem; color: var(--text-primary); font-weight: 500;">
+                        🏆 Built as a team effort during the BMW / Lovable Hackathon sprint. I owned the n8n workflow backend architecture.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Architecture Overview</h2>
+                    <p>
+                        The application is divided into two main layers: a powerful, locally-hosted workflow backend and an ultra-modern React frontend.
+                    </p>
+                    <ul class="tech-list">
+                        <li><strong>Layer 1 (AI Pipeline):</strong> An n8n workflow backend serving as an end-to-end agentic pipeline. It handles CV parsing, unstructured scenario input mapping, multi-dimensional scoring, and candidate cost analysis using the Anthropic Claude API.</li>
+                        <li><strong>Layer 2 (Frontend Interface):</strong> A React 18 frontend built with Vite, Tailwind CSS, and shadcn/ui. Initially deployed on Vercel with mock AI functions for rapid hackathon presentation, maintaining compatibility.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>AI Engine & Agents</h2>
+                    <p>
+                        The core AI reasoning relies on four conceptual agents integrated into the pipeline:
+                    </p>
+                    <ol class="tech-list" style="list-style: decimal; padding-left: 1.5rem;">
+                        <li><strong>Candidate Profiler:</strong> Extracts competencies, character traits, and HR opinions into structured JSON profiles from raw CVs.</li>
+                        <li><strong>Scenario Analyst:</strong> Converts raw free-text situations into structured scenarios. Evaluates missing context through sequential Q&A.</li>
+                        <li><strong>Scoring & Strategy Agent:</strong> Produces rank scoring with specific reasoning bullets, calculating impact points across domains (fit, timeline, risk).</li>
+                        <li><strong>Scenario Comparison Agent:</strong> Allows comparative ranking deltas when evaluating identical candidate cohorts under different organizational stressors.</li>
+                    </ol>
+                    <div style="padding: 1rem; background: rgba(59, 130, 246, 0.1); border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.2); margin-top: 1rem;">
+                        <p style="margin: 0; font-family: monospace; font-size: 0.9rem; color: var(--accent-primary);">
+                        Overall Score = (Scenario Fit × 0.3) + (Exp Match × 0.25) + (Leadership Fit × 0.2) + (Availability × 0.15) + ((100 - Risk) × 0.1)
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Key Engineering Decisions</h2>
+                    <ul class="tech-list">
+                        <li><strong>n8n Distributed Config:</strong> Webhook chains required isolated execution context forced inline configuration nodes rather than shared blocks. Node.js `fs` module usage explicitly whitelisted locally for file I/O operations.</li>
+                        <li><strong>Deployment Compromises:</strong> Serverless architecture (Vercel) cannot host persistent n8n automated flows natively, pushing towards local Docker Compose instances or Render for backend scale.</li>
+                        <li><strong>Prompt Abstraction:</strong> Kept API schemas provider-agnostic, designing Claude integration strictly to content block abstractions to ease transitioning to Gemini models in future iterations.</li>
+                        <li><strong>Three.js / 3D Graphics:</strong> Deployed an instanced Fibonacci sphere node mesh wrapped with breathing animations. Device pixel ratio strictly capped at 1.5 to maintain stable framerates on lower-end devices.</li>
+                    </ul>
+                </section>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="project-sidebar">
+                <div class="sidebar-block">
+                    <h3>Role</h3>
+                    <p>AI Pipeline Lead / n8n Owner</p>
+                </div>
+                <div class="sidebar-block">
+                    <h3>Event</h3>
+                    <p>BMW / Lovable Hackathon</p>
+                </div>
+                <div class="sidebar-block">
+                    <h3>Stack</h3>
+                    <div class="stack-tags">
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>n8n</span>
+                        <span>Claude API</span>
+                        <span>Tailwind</span>
+                        <span>Three.js</span>
+                    </div>
+                </div>
+                <div class="sidebar-block">
+                    <a href="https://talenza.vercel.app" target="_blank" class="btn btn-primary full-width">Live Demo</a>
+                    <a href="https://github.com/tahaxtrex/Talenza" target="_blank" class="btn btn-secondary full-width" style="margin-top: 0.5rem">View Repository</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+</body>
+
+</html>

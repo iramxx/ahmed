@@ -1221,5 +1221,177 @@ footer a:hover {
   color: #f59e0b !important;
   /* Amber 500 */
   text-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
-}T i m e s t a m p :   0 2 / 0 6 / 2 0 2 6   1 8 : 2 1 : 5 4  
- 
+}
+
+/* Audio Notice / Callout */
+.audio-notice {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-left: 4px solid #f59e0b;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  backdrop-filter: blur(8px);
+}
+
+.audio-notice-icon {
+  font-size: 1.35rem;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.audio-notice-content {
+  flex: 1;
+}
+
+.audio-notice-title {
+  color: #fbbf24;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.audio-notice-text {
+  color: #fef3c7;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* CV Viewer Tabs */
+.cv-header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: rgba(17, 24, 39, 0.85);
+  border-bottom: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cv-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cv-tab-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cv-tab-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cv-tab-btn.active {
+  color: #ffffff;
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  box-shadow: 0 2px 10px rgba(129, 140, 248, 0.35);
+}
+
+.cv-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+
+/* Experience Status Badges & Active Accents */
+.exp-badge-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.status-badge-present {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #34d399;
+  box-shadow: 0 0 8px #34d399;
+  display: inline-block;
+  animation: pulseGreen 2s infinite ease-in-out;
+}
+
+@keyframes pulseGreen {
+  0%, 100% {
+    transform: scale(0.9);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 1;
+  }
+}
+
+.status-badge-completed {
+  background: rgba(148, 163, 184, 0.1);
+  color: #94a3b8;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.experience-card.is-present {
+  border-color: rgba(52, 211, 153, 0.25);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.04) 0%, rgba(17, 24, 39, 0.75) 100%);
+}
+
+.experience-card.is-present::before {
+  background: #34d399;
+  box-shadow: 0 0 12px rgba(52, 211, 153, 0.7);
+  opacity: 0.95;
+}
+
+.experience-card-gold.is-present {
+  border-color: rgba(245, 158, 11, 0.5);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(3, 7, 18, 0.5) 100%);
+}
+
+.experience-card-gold.is-present::before {
+  background: #f59e0b;
+  box-shadow: 0 0 15px #f59e0b;
+}
+
+.exp-date-present {
+  color: #f1f5f9;
+  font-weight: 500;
+}

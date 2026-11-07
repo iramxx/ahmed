@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Talks | Ahmed</title>
+    <title>Talks | Ahmed Maghri</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
@@ -14,8 +14,8 @@
 <body>
     <nav class="glass-nav">
         <a href="index.html" class="nav-logo">
-            <img src="assets/hero.jpg" alt="Ahmed" class="nav-logo-img">
-            Ahmed
+            <img src="assets/hero.jpg" alt="Ahmed Maghri" class="nav-logo-img">
+            Ahmed Maghri
         </a>
 
         <button class="mobile-menu-toggle" aria-label="Toggle menu">
@@ -43,20 +43,67 @@
     <main>
         <header class="page-header">
             <h1>Talks</h1>
-            <p>Presentations, workshops, and teaching sessions.</p>
+            <p>Presentations, lectures, workshops, and academic tutorials.</p>
         </header>
 
         <!-- Sub-Navbar -->
         <nav class="sub-nav">
+            <button class="sub-nav-btn active" onclick="openTab(event, 'transformers-llms')">When Math Learned to Think (Transformers & LLMs)</button>
             <button class="sub-nav-btn" onclick="openTab(event, 'math-finance')">The Numbers Behind Trade</button>
-            <button class="sub-nav-btn active" onclick="openTab(event, 'math-crypto')">Math behind Cryptography, and
-                Cybersecurity</button>
-            <button class="sub-nav-btn" onclick="openTab(event, 'math-ai')">Math behind AI, ML, and NN</button>
-            <button class="sub-nav-btn" onclick="openTab(event, 'ta-cpp')">Teaching Assistant in C & C++</button>
-            <button class="sub-nav-btn" onclick="openTab(event, 'ta-math')">Teaching Assistant in Math foundations of
-                CS</button>
+            <button class="sub-nav-btn" onclick="openTab(event, 'math-crypto')">Math Behind Cryptography</button>
+            <button class="sub-nav-btn" onclick="openTab(event, 'math-ai')">Math Behind AI, ML, & NN</button>
+            <button class="sub-nav-btn" onclick="openTab(event, 'ta-cpp')">TA in C & C++</button>
+            <button class="sub-nav-btn" onclick="openTab(event, 'ta-math')">TA in Math Foundations</button>
             <button class="sub-nav-btn" onclick="openTab(event, 'shor')">The Qubit & Shor's Algo</button>
         </nav>
+
+        <!-- Tab Content 0: Transformers & LLMs (Newest Talk) -->
+        <div id="transformers-llms" class="tab-content active" style="display: block;">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8wkuPAm0EFw"
+                    title="When Math Learned to Think: Transformers & LLMs"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <article class="talk-card-full" style="border: none; padding: 0;">
+                <div class="talk-meta">
+                    <span class="talk-date">October 2026</span>
+                    <span class="talk-venue">Constructor University Math Society</span>
+                </div>
+                <h3>When Math Learned to Think: Transformers & Large Language Models</h3>
+                <p class="talk-topic">Attention Mechanisms / QKV Projections / Positional Encodings / Softmax Geometry / Latent Spaces</p>
+
+                <!-- Audio Notice Callout -->
+                <div class="audio-notice">
+                    <div class="audio-notice-icon">⚠️</div>
+                    <div class="audio-notice-content">
+                        <div class="audio-notice-title">Audio Recording Notice — Sincere Apologies!</div>
+                        <p class="audio-notice-text">
+                            During this live stream, a hardware audio capture failure caused the sound not to record. Sincere apologies for the silence! Fortunately, the complete visual walkthrough, all slide decks, and live mathematical board derivations are preserved on screen throughout the entire lecture.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="talk-desc" style="max-width: 100%;">
+                    <p>
+                        "How did mathematical equations start demonstrating synthetic reasoning?"
+                    </p>
+                    <p style="margin-top: 0.5rem;">
+                        This lecture unpacks the mathematical engine behind modern Transformers and Large Language Models. Rather than treating deep neural networks as black boxes, we dissect the rigorous linear algebra, geometry, and probability that enable models like ChatGPT to reason.
+                    </p>
+                    <p style="margin-top: 0.5rem;">
+                        Key topics covered include:
+                    </p>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.8; color: var(--text-secondary);">
+                        <li><strong>Semantic Vector Spaces:</strong> Tokenization, word embeddings, and contextualized representation spaces.</li>
+                        <li><strong>Self-Attention Mechanism:</strong> Query, Key, and Value ($Q, K, V$) projections, scaled dot-product scoring, and geometric interpretability.</li>
+                        <li><strong>Multi-Head Attention:</strong> Orthogonal subspace projections enabling concurrent linguistic and relational reasoning.</li>
+                        <li><strong>Positional Encodings:</strong> Sinusoidal embeddings and Rotary Position Embeddings (RoPE) overcoming permutation invariance.</li>
+                        <li><strong>Softmax Normalization & Residual Streams:</strong> Gradient highways, layer normalization dynamics, and information propagation.</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
 
         <!-- Tab Content 2: Math Behind AI -->
         <div id="math-ai" class="tab-content">
@@ -115,7 +162,7 @@
         </div>
 
         <!-- Tab Content X: Math Behind Cryptography -->
-        <div id="math-crypto" class="tab-content active" style="display: block;">
+        <div id="math-crypto" class="tab-content">
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/V4_HV2FFi5c"
                     title="YouTube video player"
@@ -150,11 +197,11 @@
             </div>
             <article class="talk-card-full" style="border: none; padding: 0;">
                 <div class="talk-meta">
-                    <span class="talk-date">Fall 2025</span>
-                    <span class="talk-venue">Programming in C/C++ (Tutorial)</span>
+                    <span class="talk-date">Fall 2025 – Present</span>
+                    <span class="talk-venue">Constructor University (Tutorial Session)</span>
                 </div>
-                <h3>Advanced Linked Data Structures</h3>
-                <p class="talk-topic">Data Structures & Memory Management</p>
+                <h3>Advanced Linked Data Structures & Memory Management</h3>
+                <p class="talk-topic">Data Structures, Pointers & C/C++ Systems</p>
                 <div class="talk-desc" style="max-width: 100%;">
                     <p>
                         A comprehensive tutorial session covering the implementation and nuances of Linked Lists in
@@ -221,8 +268,6 @@
                 </article>
             </div>
 
-
-
             <!-- Video 3: Floating Point & IEEE -->
             <div style="margin-bottom: 4rem;">
                 <div class="video-container">
@@ -286,7 +331,7 @@
             <article class="talk-card-full" style="border: none; padding: 0;">
                 <div class="talk-meta">
                     <span class="talk-date">March 2025</span>
-                    <span class="talk-venue">UgS 1</span>
+                    <span class="talk-venue">Undergraduate Seminar · Published Research</span>
                 </div>
                 <h3>The Qubit & Shor’s Algorithm</h3>
                 <p class="talk-topic">Quantum Computing / Cryptography</p>
@@ -298,7 +343,7 @@
                         concepts explored in my
                         <a href="projects/shors-algo.html"
                             style="color: var(--accent-primary); text-decoration: underline;">Shor's Algorithm
-                            Project</a>.
+                            Project</a> (published in Constructor University’s Student Math Journal).
                     </p>
                 </div>
             </article>
@@ -311,6 +356,7 @@
                 tabcontent = document.getElementsByClassName("tab-content");
                 for (i = 0; i < tabcontent.length; i++) {
                     tabcontent[i].style.display = "none";
+                    tabcontent[i].classList.remove("active");
                 }
 
                 // Remove active class from all buttons
@@ -320,7 +366,11 @@
                 }
 
                 // Show the current tab and add active class to the button
-                document.getElementById(tabName).style.display = "block";
+                var target = document.getElementById(tabName);
+                if (target) {
+                    target.style.display = "block";
+                    target.classList.add("active");
+                }
                 evt.currentTarget.className += " active";
             }
         </script>

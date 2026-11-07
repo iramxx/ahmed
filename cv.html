@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV | Ahmed</title>
+    <title>Curriculum Vitae | Ahmed Maghri</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
@@ -13,7 +13,6 @@
         body {
             height: 100vh;
             overflow: hidden;
-            /* Lock scroll for full embed */
             display: flex;
             flex-direction: column;
         }
@@ -24,16 +23,49 @@
             max-width: 100%;
             display: flex;
             flex-direction: column;
+            overflow: hidden;
         }
 
-        .cv-container {
+        .cv-viewer-wrapper {
             flex: 1;
             width: 100%;
             height: 100%;
-            background: #1e293b;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            background: #0f172a;
+        }
+
+        .cv-frame-container {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .cv-frame-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                height: auto;
+                overflow: auto;
+            }
+
+            .cv-header-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .cv-tabs {
+                flex-direction: column;
+            }
+
+            .cv-frame-container {
+                min-height: 80vh;
+            }
         }
     </style>
 </head>
@@ -41,8 +73,8 @@
 <body>
     <nav class="glass-nav">
         <a href="index.html" class="nav-logo">
-            <img src="assets/hero.jpg" alt="Ahmed" class="nav-logo-img">
-            Ahmed
+            <img src="assets/hero.jpg" alt="Ahmed Maghri" class="nav-logo-img">
+            Ahmed Maghri
         </a>
 
         <button class="mobile-menu-toggle" aria-label="Toggle menu">
@@ -68,13 +100,62 @@
     </script>
 
     <main>
-        <div class="cv-container">
-            <embed src="assets/Maghri_Ahmed_CV.pdf" type="application/pdf" width="100%" height="100%" />
-            <div style="position: fixed; bottom: 2rem; right: 2rem;">
-                <a href="assets/Maghri_Ahmed_CV.pdf" class="btn btn-primary" download>Download PDF</a>
+        <div class="cv-viewer-wrapper">
+            <div class="cv-header-controls">
+                <div class="cv-tabs">
+                    <button id="tab-industry" class="cv-tab-btn active" onclick="switchCV('industry')">
+                        💼 Industry &amp; SWE CV
+                    </button>
+                    <button id="tab-academic" class="cv-tab-btn" onclick="switchCV('academic')">
+                        🎓 Academic &amp; Research CV
+                    </button>
+                </div>
+                <div class="cv-actions">
+                    <a id="cv-download-btn" href="assets/Ahmed_Maghri_CV_Industry.pdf" class="btn btn-primary" download="Ahmed_Maghri_CV_Industry.pdf">
+                        ⬇ Download PDF
+                    </a>
+                    <a id="cv-open-btn" href="assets/Ahmed_Maghri_CV_Industry.pdf" target="_blank" class="btn btn-secondary">
+                        ↗ Open in New Tab
+                    </a>
+                </div>
+            </div>
+
+            <div class="cv-frame-container">
+                <iframe id="cv-embed" src="assets/Ahmed_Maghri_CV_Industry.pdf#toolbar=1" type="application/pdf"></iframe>
             </div>
         </div>
     </main>
+
+    <script>
+        const cvData = {
+            industry: {
+                file: 'assets/Ahmed_Maghri_CV_Industry.pdf',
+                name: 'Ahmed_Maghri_CV_Industry.pdf'
+            },
+            academic: {
+                file: 'assets/Ahmed_Maghri_CV_Academic.pdf',
+                name: 'Ahmed_Maghri_CV_Academic.pdf'
+            }
+        };
+
+        function switchCV(type) {
+            const data = cvData[type];
+            if (!data) return;
+
+            const embed = document.getElementById('cv-embed');
+            embed.src = data.file + '#toolbar=1';
+
+            const downloadBtn = document.getElementById('cv-download-btn');
+            downloadBtn.href = data.file;
+            downloadBtn.setAttribute('download', data.name);
+
+            const openBtn = document.getElementById('cv-open-btn');
+            openBtn.href = data.file;
+
+            document.getElementById('tab-industry').classList.toggle('active', type === 'industry');
+            document.getElementById('tab-academic').classList.toggle('active', type === 'academic');
+        }
+    </script>
 </body>
 
 </html>

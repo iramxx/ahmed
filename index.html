@@ -4,20 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmed | CS & Math</title>
+  <title>Ahmed Maghri | CS & Mathematics</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="assets/style.css" />
   <meta name="description"
-    content="Portfolio of Ahmed, Computer Science major & Math minor. Specializing in Quantum Computing, ML, and Systems.">
+    content="Portfolio of Ahmed Maghri, Computer Science major & Math minor at Constructor University. Research in Semantic Communications, Causal ML, and Systems.">
 </head>
 
 <body>
   <nav class="glass-nav">
     <a href="index.html" class="nav-logo">
-      <img src="assets/hero.jpg" alt="Ahmed" class="nav-logo-img">
-      Ahmed
+      <img src="assets/hero.jpg" alt="Ahmed Maghri" class="nav-logo-img">
+      Ahmed Maghri
     </a>
 
     <!-- Hamburger Menu Button (Mobile Only) -->
@@ -48,21 +48,22 @@
     <!-- 1. Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <h1>Ahmed</h1>
+        <h1>Ahmed Maghri</h1>
         <p class="identity">Computer Science major · Mathematics & Modeling minor @ Constructor University</p>
 
         <div class="roles">
-          <span class="role-tag">Research Intern at York University</span>
-          <span class="role-tag">President of Math Society at Constructor University</span>
+          <span class="role-tag">Research Assistant (Semantic Comms) @ Constructor</span>
+          <span class="role-tag">ML & SWE @ Insytes GmbH</span>
+          <span class="role-tag">President of Math Society</span>
+          <span class="role-tag">Former Visiting Researcher @ York University (DAAD RISE)</span>
         </div>
 
         <p class="bio">
-          Passionate about bridging the gap between theoretical mathematics and scalable systems.
-          Building tools for the future of computing.
+          Passionate about bridging mathematical theory, causal machine learning, semantic communications, and scalable distributed systems. Building tools for the next generation of computing.
         </p>
 
         <div class="cta-group">
-          <a href="assets/Maghri_Ahmed_CV.pdf" target="_blank" class="btn btn-primary">CV</a>
+          <a href="cv.html" class="btn btn-primary">View CV</a>
           <a href="#experience" class="btn btn-secondary">Experience</a>
           <a href="talks.html" class="btn btn-secondary">Talks</a>
           <a href="https://github.com/iramxx" target="_blank" class="btn btn-secondary">GitHub</a>
@@ -75,7 +76,7 @@
       </div>
     </section>
 
-    <!-- 2. Featured Talk (EASY TO UPDATE) -->
+    <!-- 2. Featured Talk -->
     <section id="featured-talk" style="margin-bottom: 5rem;">
       <h2 style="margin-bottom: 1rem;">Latest Talk</h2>
       <div
@@ -83,8 +84,8 @@
 
         <!-- Video Embed -->
         <div class="video-container" style="margin-bottom: 1.5rem;">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/V4_HV2FFi5c"
-            title="The Math Behind Cryptography and Cybersecurity"
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/8wkuPAm0EFw"
+            title="When Math Learned to Think: Transformers & LLMs"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
         </div>
@@ -92,20 +93,30 @@
         <!-- Talk Info -->
         <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
           <span
-            style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-secondary); font-weight: 600;">February
-            19, 2026</span>
+            style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-secondary); font-weight: 600;">October
+            2026</span>
           <span
             style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-secondary); font-weight: 600;">Math
-            Society Topic Tutorial</span>
+            Society "Math Behind" Series</span>
         </div>
 
-        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">The Math Behind Cryptography and Cybersecurity</h3>
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">When Math Learned to Think: Transformers & Large Language Models</h3>
         <p style="font-size: 0.9rem; color: var(--accent-tertiary); margin-bottom: 1rem;">Constructor University Math
           Society</p>
 
+        <!-- Audio Notice Callout -->
+        <div class="audio-notice">
+          <div class="audio-notice-icon">⚠️</div>
+          <div class="audio-notice-content">
+            <div class="audio-notice-title">Audio Recording Glitch — Sincere Apologies!</div>
+            <p class="audio-notice-text">
+              Due to a hardware recording glitch during the live stream, the audio was unfortunately lost. Sincere apologies for the silence! However, all presentation slides, live mathematical derivations, and blackboard explanations are clearly preserved on screen.
+            </p>
+          </div>
+        </div>
+
         <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
-          An exploration of the mathematical foundations that secure our digital world. In this talk, I cover Number
-          Theory, RSA, Shor's algorithm, Quantum Computing, and delve into Lattice-based cryptography.
+          An in-depth mathematical exploration of the mechanisms powering modern Transformers and Large Language Models. In this lecture, I unpack query-key-value projections, multi-head self-attention geometry, positional encodings, softmax normalization dynamics, and how reasoning behaviors emerge from high-dimensional representations.
         </p>
 
         <a href="talks.html" class="btn btn-secondary">View All Talks →</a>
@@ -116,22 +127,42 @@
     <section id="projects">
       <h2>Featured Projects</h2>
       <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
-        <!-- Card 1 -->
+        <!-- Card 1: Talenza -->
+        <article class="project-card">
+          <h3 class="project-title">Talenza</h3>
+          <div class="project-meta">AI Systems · n8n · Claude API</div>
+          <p class="project-desc">
+            Executive hiring intelligence platform using a 3-stage agentic workflow for scenario-based candidate evaluation. Built for BMW x Lovable Hackathon.
+          </p>
+          <a href="projects/talenza.html" class="card-link">View Project →</a>
+        </article>
+
+        <!-- Card 2: AutoAgent -->
+        <article class="project-card">
+          <h3 class="project-title">AutoAgent</h3>
+          <div class="project-meta">AI Agents · 2nd Place Hackathon</div>
+          <p class="project-desc">
+            Autonomous multi-agent framework converting scientific paper links into runnable demos, reducing runtime from 20 minutes down to 70 seconds.
+          </p>
+          <a href="projects/auto-agent.html" class="card-link">View Project →</a>
+        </article>
+
+        <!-- Card 3: Shor's Algo -->
         <article class="project-card">
           <h3 class="project-title">Shor’s Algorithm & QC</h3>
-          <div class="project-meta">Research · Theory + Implementation</div>
+          <div class="project-meta">Research · Published Paper</div>
           <p class="project-desc">
-            Simulation of Shor’s algorithm for integer factorization on quantum circuits.
+            Simulation of Shor’s quantum factorization algorithm and post-quantum cryptography, published in Constructor University’s Student Math Journal.
           </p>
           <a href="projects/shors-algo.html" class="card-link">View Project →</a>
         </article>
 
-        <!-- Card 2 -->
+        <!-- Card 4: MSA Platform -->
         <article class="project-card">
-          <h3 class="project-title">MSA Platform</h3>
-          <div class="project-meta">Full-stack · Real Users</div>
+          <h3 class="project-title">MSA Campus Platform</h3>
+          <div class="project-meta">Full-stack · 400+ Active Users</div>
           <p class="project-desc">
-            Co-built a 400+ user campus platform (React/Vite, Express, Firebase, Stripe) with accounts, dashboard, calendars, RSVP, and donation flows.
+            Production campus hub (React/Vite, Express, Firebase, Stripe) serving 400+ users, tripling weekly donation volume post-launch.
           </p>
           <a href="projects/msa-platform.html" class="card-link">View Project →</a>
         </article>
@@ -146,104 +177,203 @@
       <h2>Experience</h2>
       <div class="experience-list">
 
-        <!-- York University -->
+        <!-- 1. Research Assistant - Abreu Group (Sep 2026 – Present) -->
+        <article class="experience-card experience-card-gold is-present">
+          <div class="exp-header">
+            <div>
+              <h3>Research Assistant, Semantic Communications</h3>
+              <span class="exp-company">Constructor University (Prof. Dr. Giuseppe Abreu Group)</span>
+            </div>
+            <div class="exp-badge-group">
+              <span class="status-badge status-badge-present"><span class="pulse-dot"></span> Present</span>
+              <span class="exp-date exp-date-present">Sep 2026 – Present</span>
+            </div>
+          </div>
+          <div class="exp-meta">Bremen, Germany | Wireless Communications & Signal Processing Group</div>
+          <ul class="exp-details">
+            <li>Reproduce and implement recent semantic communication methods, including a fixed-receiver robot constrained to U/D/L/R commands for semantic encoding experiments and letter-drawing tasks.</li>
+            <li>Investigate candidate-message pruning and distortion-cost boundary algorithms to optimize transmission fidelity under strict information constraints.</li>
+            <li>Present research findings and benchmark evaluations weekly to the laboratory group.</li>
+          </ul>
+        </article>
+
+        <!-- 2. Insytes GmbH - Stint 2 (Sep 2026 – Present) -->
+        <article class="experience-card is-present">
+          <div class="exp-header">
+            <div>
+              <h3>ML & Software Engineer (Werkstudent) — Infrastructure & Multi-Agent</h3>
+              <span class="exp-company">Insytes GmbH</span>
+            </div>
+            <div class="exp-badge-group">
+              <span class="status-badge status-badge-present"><span class="pulse-dot"></span> Present</span>
+              <span class="exp-date exp-date-present">Sep 2026 – Present</span>
+            </div>
+          </div>
+          <div class="exp-meta">Heilbronn, Germany | AWS Cloud Infrastructure & Causal AI</div>
+          <ul class="exp-details">
+            <li>Engineered AWS-based causal AI infrastructure utilizing Amazon ECS and Amazon Bedrock for scalable inference pipelines.</li>
+            <li>Parallelized Kronos multi-agent workloads across CPU processes and eliminated task bottlenecks, slashing execution time from ~6 min down to ~1 min.</li>
+            <li>Researched causal AI methods for unstructured data and presented strategic findings directly to the <strong>Samsung Research & Innovation department</strong>.</li>
+          </ul>
+        </article>
+
+        <!-- 3. Teaching Assistant: Networks & OS (Sep 2026 – Present) -->
+        <article class="experience-card is-present">
+          <div class="exp-header">
+            <div>
+              <h3>Teaching Assistant: Computer Networks & Operating Systems</h3>
+              <span class="exp-company">Constructor University</span>
+            </div>
+            <div class="exp-badge-group">
+              <span class="status-badge status-badge-present"><span class="pulse-dot"></span> Present</span>
+              <span class="exp-date exp-date-present">Sep 2026 – Present</span>
+            </div>
+          </div>
+          <div class="exp-meta">Bremen, Germany | Computer Science Department</div>
+          <ul class="exp-details">
+            <li>Independently deliver full lectures and tutorials in <strong>Computer Networks</strong> and <strong>Operating Systems</strong> for courses serving approximately <strong>260 students</strong>.</li>
+            <li>Design and grade course assignments, quizzes, and curriculum materials, holding regular technical recitations and hands-on lab sessions.</li>
+          </ul>
+        </article>
+
+        <!-- 4. AWS Student Builder Group (Sept 2026 – Present) -->
+        <article class="experience-card is-present">
+          <div class="exp-header">
+            <div>
+              <h3>Technical Team Lead</h3>
+              <span class="exp-company">AWS Student Builder Group</span>
+            </div>
+            <div class="exp-badge-group">
+              <span class="status-badge status-badge-present"><span class="pulse-dot"></span> Present</span>
+              <span class="exp-date exp-date-present">Sept 2026 – Present</span>
+            </div>
+          </div>
+          <div class="exp-meta">Bremen, Germany | Constructor University</div>
+          <ul class="exp-details">
+            <li>Selected as Technical Lead for the university AWS Student Group, directing cloud architecture workshops, hands-on infrastructure labs, and technical mentorship for student builders.</li>
+          </ul>
+        </article>
+
+        <!-- 5. York University (Jun 2026 – Aug 2026) -->
         <article class="experience-card experience-card-gold">
           <div class="exp-header">
-            <h3>Research Intern in Semantic Communications & AI</h3>
-            <span class="exp-company">York University</span>
-            <span class="exp-date">Jun 2026 – Present</span>
+            <div>
+              <h3>Visiting Researcher in Semantic Communications & AI</h3>
+              <span class="exp-company">York University</span>
+            </div>
+            <div class="exp-badge-group">
+              <span class="status-badge status-badge-completed">Completed</span>
+              <span class="exp-date">Jun 2026 – Aug 2026</span>
+            </div>
           </div>
           <div class="exp-meta">Toronto, Canada | MITACS & DAAD RISE Worldwide Fellow</div>
           <ul class="exp-details">
-            <li>Selected as one of ~60 German students nationwide for a <strong>EUR 5,000 MITACS & DAAD RISE Worldwide</strong> fellowship.</li>
-            <li>Investigating state-of-the-art semantic communication systems and AI-driven approaches for next-generation networks.</li>
-            <li>Prototyping and benchmarking novel methods under <strong>Prof. Ping Wang</strong> (IEEE Fellow, York Research Chair, 30,000+ citations).</li>
+            <li>Selected as one of ~60 German students nationwide for a prestigious <strong>EUR 5,000 MITACS & DAAD RISE Worldwide</strong> fellowship under <strong>Prof. Dr. Ping Wang</strong> (IEEE Fellow, +30k citations).</li>
+            <li>Contributed to <em>OpenSemCom</em>, a risk-certified semantic communication framework for dynamic 6G wireless networks.</li>
+            <li>Implemented semantic HARQ refinement, progressive payload transmission, stage-specific conformal calibration, and Sionna-based physical-layer simulations (AWGN, Rayleigh, Rician, MIMO, 5G LDPC, QPSK).</li>
+            <li>Integrated vision-language models (SigLIP2, OpenCLIP, DINO, ImageBind) and designed threshold-relative acceptance-margin analysis.</li>
+            <li>Contributed to two manuscripts submitted to <strong>IEEE ICC 2027</strong>: <em>OpenSemCom</em> (2nd author) and <em>RASTC</em> (3rd author).</li>
           </ul>
         </article>
 
-        <!-- Insytes -->
+        <!-- 6. Insytes GmbH - Stint 1 (Feb 2026 – Jun 2026) -->
         <article class="experience-card">
           <div class="exp-header">
-            <h3>Software Engineer (Werkstudent)</h3>
-            <span class="exp-company">Insytes GmbH</span>
-            <span class="exp-date">Feb 2026 – Jun 2026</span>
+            <div>
+              <h3>Software Engineer (Werkstudent) — Causal Discovery</h3>
+              <span class="exp-company">Insytes GmbH</span>
+            </div>
+            <div class="exp-badge-group">
+              <span class="status-badge status-badge-completed">Completed</span>
+              <span class="exp-date">Feb 2026 – Jun 2026</span>
+            </div>
           </div>
-          <div class="exp-meta">Heilbronn, Germany | Causal ML & Infrastructure</div>
+          <div class="exp-meta">Heilbronn, Germany | Causal ML & Algorithmic Optimization</div>
           <ul class="exp-details">
-            <li>Implemented causal feature permutation to identify top causal factors without running full PCMCI/FCI, enabling fast preliminary results while the full analysis runs in parallel.</li>
-            <li>Diagnosed an AWS runtime regression in the causal pipeline by tracing a CPU/thread allocation mismatch in ECS; tuned task resources to eliminate throttling, cutting runtime from ~6 min to ~1 min.</li>
-            <li>Researched causal AI methods for unstructured data and presented findings to a committee of the <strong>Samsung Research & Innovation department</strong>, including Natasha Jaeger.</li>
+            <li>Evaluated and implemented causal discovery algorithms including LiNGAM, FCI, PC, and PCMCI across diverse data settings and analysis workflows.</li>
+            <li>Implemented causal feature permutation to identify top causal factors without running full PCMCI/FCI, enabling rapid preliminary results while deep analysis executed concurrently.</li>
+            <li>Diagnosed and resolved runtime regressions in the causal pipeline by tracing CPU/thread allocation mismatches in ECS tasks, eliminating resource throttling.</li>
           </ul>
         </article>
 
-        <!-- Constructor University -->
+        <!-- 7. Teaching Assistant: C/C++ & Math (Sep 2025 – Feb 2026) -->
         <article class="experience-card">
           <div class="exp-header">
-            <h3>Teaching Assistant: C/C++ & Math Foundations of CS</h3>
-            <span class="exp-company">Constructor University</span>
-            <span class="exp-date">Sept 2025 – Feb 2026</span>
+            <div>
+              <h3>Teaching Assistant: C/C++ & Math Foundations of CS</h3>
+              <span class="exp-company">Constructor University</span>
+            </div>
+            <div class="exp-badge-group">
+              <span class="status-badge status-badge-completed">Completed</span>
+              <span class="exp-date">Sep 2025 – Feb 2026</span>
+            </div>
           </div>
-          <div class="exp-meta">Bremen, Germany | Algorithms & Mathematics</div>
+          <div class="exp-meta">Bremen, Germany | Computer Science Department</div>
           <ul class="exp-details">
-            <li>Led classes and office hours for <strong>350+ students</strong> across C/C++ and Mathematical Foundations of CS.</li>
-            <li>Redesigned sessions around motivation-first explanations and live problem-solving, growing tutorial attendance from ~10 to <strong>40-45 students/session</strong>.</li>
+            <li>Led classes, recitations, and office hours for <strong>350+ students</strong> across Programming in C/C++ and Mathematical Foundations of Computer Science.</li>
+            <li>Restructured sessions around motivation-first pedagogy and live problem-solving, growing weekly tutorial attendance from ~10 to <strong>40-45 students/session</strong>.</li>
             <li>Reduced course drop rate by <strong>10%</strong> through structured catch-up sessions and targeted support for at-risk students.</li>
           </ul>
         </article>
 
-        <!-- Constructor Tech -->
+        <!-- 8. Constructor Tech (Jul 2025 – Sep 2025) -->
         <article class="experience-card">
           <div class="exp-header">
-            <h3>Research Student Intern in AI for Geometry Reasoning (Sengoku)</h3>
-            <span class="exp-company">Constructor Tech</span>
-            <span class="exp-date">Jul 2025 – Sep 2025</span>
+            <div>
+              <h3>Research Student Intern in AI for Geometry Reasoning (Sengoku)</h3>
+              <span class="exp-company">Constructor Tech</span>
+            </div>
+            <div class="exp-badge-group">
+              <span class="status-badge status-badge-completed">Completed</span>
+              <span class="exp-date">Jul 2025 – Sep 2025</span>
+            </div>
           </div>
-          <div class="exp-meta">Bremen, Germany | AI for Geometry Reasoning</div>
+          <div class="exp-meta">Bremen, Germany | AI Reasoning & Formal Methods</div>
           <ul class="exp-details">
-            <li>Designed a geometry reasoning model mimicking <strong>AlphaProof's architecture</strong>.</li>
-            <li>Built a custom Domain-Specific Language (DSL) for shape encoding.</li>
-            <li>Trained model on high-school-level geometry problems, achieving end-to-end problem solving on a subset of benchmark cases.</li>
+            <li>Developed an <strong>AlphaProof-inspired</strong> geometry reasoning system with a custom Domain-Specific Language (DSL) for geometric shape encoding and model training.</li>
+            <li>Achieved end-to-end automated solution generation on a benchmark subset of high-school geometry problems.</li>
           </ul>
         </article>
 
-        <!-- GBCS Group -->
+        <!-- 9. GBCS Group (Jun 2025 – Aug 2025) -->
         <article class="experience-card">
           <div class="exp-header">
-            <h3>Backend Django Lead Intern</h3>
-            <span class="exp-company">GBCS Group</span>
-            <span class="exp-date">Jun 2025 – Aug 2025</span>
+            <div>
+              <h3>Backend Django Lead Intern</h3>
+              <span class="exp-company">GBCS Group</span>
+            </div>
+            <div class="exp-badge-group">
+              <span class="status-badge status-badge-completed">Completed</span>
+              <span class="exp-date">Jun 2025 – Aug 2025</span>
+            </div>
           </div>
           <div class="exp-meta">Calgary, Canada | Fleet Management Systems</div>
           <ul class="exp-details">
-            <li>Led an 11-person backend team: ran SCRUM ceremonies, coordinated delivery, and introduced agile methodology one month after the API rearchitecture, doubling overall software delivery speed.</li>
-            <li>Flattened deeply nested REST API endpoints and reduced endpoint sprawl, cutting frontend debug time from 2–3 days to same-day resolution.</li>
-            <li>Optimized Scope 1–4 CO2 calculations using NumPy and pandas vectorization, cutting average runtime from 10s to 1s.</li>
+            <li>Led an 11-person backend engineering team: introduced agile methodologies and coordinated delivery, doubling overall software release cadence.</li>
+            <li>Re-architected deeply nested REST APIs, cutting frontend debugging cycles from 2–3 days down to same-day resolution.</li>
+            <li>Vectorized Scope 1–4 carbon emission calculations using NumPy and pandas, reducing runtime from 10s to 1s.</li>
           </ul>
         </article>
 
-
-
       </div>
     </section>
 
-
-
-    <!-- 4. Quick Credibility -->
+    <!-- 5. Quick Credibility -->
     <section class="credibility">
       <div class="cred-item">
-        <strong>Engineering</strong> Scalable Systems & Full-stack
+        <strong>Engineering</strong> Causal AI, AWS & Distributed Systems
       </div>
       <div class="cred-item">
-        <strong>Research</strong> AI Automation & Geometry
+        <strong>Research</strong> Semantic Comms, 6G & Quantum Computing
       </div>
       <div class="cred-item">
-        <strong>Leadership</strong> Math Society President
+        <strong>Leadership</strong> Math Society President & TA Lecturer
       </div>
     </section>
 
-    <!-- 5. Footer -->
+    <!-- 6. Footer -->
     <footer>
-      <a href="amaghri@constructor.university">Email</a>
+      <a href="mailto:amaghri@constructor.university">Email</a>
       <a href="https://github.com/iramxx" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/ahmed-maghri/" target="_blank">LinkedIn</a>
       <span>Constructor University</span>

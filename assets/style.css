@@ -340,7 +340,7 @@ a {
 /* Quick Credibility */
 .credibility {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2rem;
   padding: 3rem 2rem;
   border-top: 1px solid var(--glass-border);
